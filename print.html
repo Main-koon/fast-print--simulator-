@@ -1,26 +1,50 @@
-       <html>
-    <head>
-        <meta charset="UTF-8">
-		<title>fast print</title>
-        <script src="js/print script.js" defer></script>
-        <link rel="stylesheet" href="css/bulma.min.css"/>
-        <link rel="stylesheet" href="css/print styles.css"/>
-    </head>
+<html>
 
-    <body>
-        <section class="hero is-primary is-large">
-            <div class="hero-head container">
-                <h1 class="label is-size-3 has-text-white promo"> Наш простой тренажер</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>fast print</title>
+    <script src="dist/launch.js" defer></script>
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <link rel="stylesheet" href="css/printStyles.css" />
+</head>
+
+<div class="modal">
+    <div class="modal-background has-background-link"></div>
+    <div class="modal-content has-background-white">
+        <h3 class="is-size-4">Результаты</h3>
+        <table class="table-of-history">
+            <thead>
+                <tr>
+                    <th > Дата попытки</th>
+                    <td>  </td>
+                    <th >Количество ошибок</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="target-error"></tr>
+            </tbody>
+        </table>
+        <div></div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+</div>
+
+<body class="has-background-black-bis">
+    <section class="hero is-primary is-large">
+        <div class="hero-head container">
+            <h1 class="label is-size-3 has-text-white promo"> Наш простой тренажер</h1>
+            <h3 class="subtitle is-size-4 has-text-white has-text-centered name-level"></h3>
+            <div class="error-panel is-hidden">
                 <h3 class="label is-size-4 has-text-link has-text-centered">Ошибки</h3>
                 <progress id="prog" class="progress is-danger" value="0" max="20"></progress>
-                <h3 class="label is-size-5 has-text-white has-text-centered begin">Press Enter to start</h3>
             </div>
-            <div class="hero-body has-background-grey-dark ">
-                <div id="columns">
-                    <div class="buttons columns is-half is-centered ">
-                    </div>
+        </div>
+        <div class="hero-body has-background-black-bis main-board">
+            <div id="columns">
+                <h3 class="label is-size-2 has-text-white has-text-centered begin anim-elem ">Press Enter to start</h3>
+                <div class="buttons columns is-half is-centered ">
                 </div>
             </div>
-        </section>
-        
-    </body>
+        </div>
+    </section>
+</body>
